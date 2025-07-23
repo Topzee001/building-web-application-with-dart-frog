@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block headerTitle %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ title }}</h1>
+    <form action="/shorten" method="POST" style="margin-top: 20px;">
+        <input type="url" name="long_url" placeholder="Enter a URL to shorten" required style="width: 60%;">
+        <button type="submit">Shorten URL</button>
+    </form>
+
+    {% if showResult %}
+    <div class="result">
+        <p>Original URL: <strong>{{ originalUrl }}</strong></p>
+        <p>Shortened URL: <a href="{{ shortenedUrl }}" target="_blank"><strong>{{ shortenedUrl }}</strong></a></p>
+    </div>
+
+    {% endif %}
+
+    {% if error %}
+    <p class="error">Please enter a valid URL.</p>
+    {% endif %}
+</div>
+{% endblock %}

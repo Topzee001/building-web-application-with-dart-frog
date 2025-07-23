@@ -1,0 +1,14 @@
+{% extends 'layout.html' %} {# Extends the base layout #}
+
+{% block title %}{{ title }}{% endblock %} {# Fills the title block #}
+{% block headerTitle %}Welcome!{% endblock %} {# Fills the headerTitle block #}
+
+{% block content %} {# This block defines the main page content #}
+<div class="container">
+    <h1>Welcome, {{ username }}!</h1>
+    <p>Today's date is: {{ currentDate }}</p>
+    {% if showMessage %}
+    <p>This message is shown conditionally using Jinja!</p>
+    {% endif %}
+</div>
+{% endblock %}

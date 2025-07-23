@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title> {# A block for title #}
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .result {
+            background-color: #e0ffe0;
+            padding: 10px;
+            margin-top: 20px;
+            border-left: 4px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>{% block headerTitle %}My App{% endblock %}</h1>
+        <a href="/" style="color: blue;">Home</a> | <a href="/shorten" style="color: blue;">Shorten a URL </a>
+
+
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %} {# This block will be filled by extending templates #}
+    </div>
+    {#
+    <div class="footer">
+        <p>&copy; {{ currentYear }} My SSR App</p>
+        {% include 'copyright_info.html' %} <!-- Including a partial -->
+    </div>
+    #}
+</body>
+
+</html>
