@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://globe.dev/globe.schema.json
-entrypoint: build/bin/server.dart
+# entrypoint: build/bin/server.dart
+# # build:
+# #   command: dart_frog build
 # build:
-#   command: dart_frog build
-build:
-  preset:
-    type: dart_frog
-    buildCommand: dart_frog build
+#   preset:
+#     type: dart_frog
+#     buildCommand: dart_frog build
 assets:
   - templates/
