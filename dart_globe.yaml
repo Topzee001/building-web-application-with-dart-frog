@@ -1,4 +1,0 @@
-name: my_ssr_app
-entrypoint: build/bin/server.dart
-build:
-  command: dart_frog build
