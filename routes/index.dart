@@ -10,7 +10,7 @@ import 'package:jinja/jinja.dart';
 import 'package:jinja/loaders.dart';
 
 final environment = Environment(
-  loader: FileSystemLoader(paths: ['templates']),
+  loader: FileSystemLoader(paths: ['templates/']),
 );
 
 Future<Response> onRequest(RequestContext context) async {

@@ -6,7 +6,7 @@ import 'package:jinja/loaders.dart';
 import 'package:my_ssr_app/db.dart';
 
 final environment = Environment(
-  loader: FileSystemLoader(paths: ['templates']),
+  loader: FileSystemLoader(paths: ['templates/']),
 );
 
 Future<Response> onRequest(RequestContext context) async {
